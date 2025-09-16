@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* ensure base background follows theme variable */
+html, body, #root {
+  height: 100%;
+  background: var(--bg-primary);
+}
