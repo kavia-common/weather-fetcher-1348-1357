@@ -132,36 +132,17 @@ function App() {
           Enter a city name and get the current weather powered by an AI-friendly API integration.
         </p>
 
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            display: 'flex',
-            gap: '0.75rem',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginTop: '1.25rem',
-          }}
-        >
+        <form onSubmit={handleSubmit} className="input-row">
           <input
             type="text"
             value={city}
             onChange={(e) => setCity(e.target.value)}
             placeholder="e.g., London"
             aria-label="City name"
-            style={{
-              padding: '0.75rem 1rem',
-              borderRadius: 8,
-              border: '1px solid var(--border-color)',
-              minWidth: 240,
-              fontSize: 16,
-              background: 'var(--bg-primary)',
-              color: 'var(--text-primary)',
-            }}
           />
           <button
             type="submit"
-            className="theme-toggle"
+            className="primary-btn"
             disabled={isFetchDisabled}
             style={{ opacity: isFetchDisabled ? 0.7 : 1 }}
           >
